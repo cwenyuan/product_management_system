@@ -1,0 +1,244 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>Document</title>
+	<link rel="stylesheet" type="text/css" href="res/static/css/main.css">
+	<link rel="stylesheet" type="text/css" href="res/layui/css/layui.css">
+	<script type="text/javascript" src="res/layui/layui.js"></script>
+	<meta name="viewport" content="width=device-width, initial-scale=1.0, minimum-scale=1.0, maximum-scale=1.0, user-scalable=0">
+	<meta http-equiv="X-UA-Compatible" content="IE=Edge,chrome=1">
+</head>
+<body id="list-cont">
+	<ul class="layui-nav">
+		<li class="layui-nav-item">
+			<a href="product.html">商品管理</a>
+		</li>
+		<li class="layui-nav-item">
+			<a href="order_form.html">订单管理<span class="layui-badge-dot"></span></a>
+		</li>
+		<li class="layui-nav-item">
+			<a href=""><img src="a.jpg" class="layui-nav-img">我</a>
+			<dl class="layui-nav-child">
+				<dd><a href="javascript:;">登陆</a></dd>
+				<dd><a href="javascript:;">退出</a></dd>
+			</dl>
+		</li>
+
+	</ul>
+	<div class="layui-tab layui-tab-card">
+		<ul class="layui-tab-title">
+			<li class="layui-this">商品信息总览</li>
+			<li>商品添加</li>
+			<li>商品编辑</li>
+			<li>商品删除</li>
+		</ul>
+		<div class="layui-tab-content" style="height: 100%;">
+			<div class="layui-tab-item layui-show">
+				<table class="layui-table">
+					<colgroup>
+					<col width="150">
+					<col width="200">
+					<col>
+				</colgroup>
+				<thead>
+					<tr>
+						<th>商品id</th>
+						<th>商品名称</th>
+						<th>商品图</th>
+						<th>商品简介</th>
+						<th>商品价格</th>
+						<th>商品数量</th>
+					</tr> 
+				</thead>
+				<tbody>
+					<tr>
+						<td>1</td>
+						<td>纸尿裤</td>
+						<td><a href="javascript:;"><img src="res/static/img/s_img2.jpg"></a></td>
+						<td><a href="javascript:;"><img src="res/static/img/details_imgbig.jpg"></a></td>
+						<td>50RMB</td>
+						<td>100</td>
+					</tr>
+					<tr>
+						<td>1</td>
+						<td>纸尿裤</td>
+						<td><a href="javascript:;"><img src="res/static/img/s_img2.jpg"></a></td>
+						<td><a href="javascript:;"><img src="res/static/img/details_imgbig.jpg"></a></td>
+						<td>50RMB</td>
+						<td>100</td>
+					</tr>
+				</tbody>
+			</table></div>
+			<div class="layui-tab-item">
+				<form class="layui-form" action="">
+					<div class="layui-form-item">
+						<label class="layui-form-label">商品名称</label>
+						<div class="layui-input-block">
+							<input type="text" name="productName" required  lay-verify="required" placeholder="请输入标题" autocomplete="off" class="layui-input">
+						</div>
+					</div>
+					<div class="layui-form-item">
+						<label class="layui-form-label">上传商品图</label>
+						<div class="layui-input-block">
+							<i class="layui-icon" id="test1">&#xe67c;</i>
+						</div>
+					</div>
+					<div class="layui-form-item">
+						<label class="layui-form-label">上传商品介绍图</label>
+						<div class="layui-input-block">
+							<i class="layui-icon" id="test2">&#xe67c;</i>
+						</div>
+					</div>
+					
+
+					<div class="layui-form-item">
+						<label class="layui-form-label">商品价格</label>
+						<div class="layui-input-block">
+							<input type="text" name="productPrice" required  lay-verify="required|number" placeholder="请输入价格" autocomplete="off" class="layui-input">
+						</div>
+					</div>
+					<div class="layui-form-item">
+						<label class="layui-form-label">商品数量</label>
+						<div class="layui-input-block">
+							<input type="text" name="productNumber" required  lay-verify="required|number" placeholder="请输入数量" autocomplete="off" class="layui-input">
+						</div>
+					</div>
+					<div class="layui-form-item">
+						<div class="layui-input-block">
+							<button class="layui-btn" lay-submit lay-filter="formDemo">立即提交</button>
+							<button type="reset" class="layui-btn layui-btn-primary">重置</button>
+						</div>
+					</div>
+				</form>
+			</div>
+			<div class="layui-tab-item">
+				<form class="layui-form" action="">
+					<div class="layui-form-item">
+						<label class="layui-form-label">选择要修改的id</label>
+						<div class="layui-input-block">
+							<select name="selectedId" lay-verify="required">
+								<option value=""></option>
+								<option value="0">1</option>
+								<option value="1">2</option>
+								<option value="2">3</option>
+								<option value="3">4</option>
+								<option value="4">5</option>
+							</select>
+						</div>
+					</div>
+					<div class="layui-form-item">
+						<label class="layui-form-label">商品名称</label>
+						<div class="layui-input-block">
+							<input type="text" name="productName" required  lay-verify="required" placeholder="请输入标题" autocomplete="off" class="layui-input">
+						</div>
+					</div>
+					<div class="layui-form-item">
+						<label class="layui-form-label">上传商品图</label>
+						<div class="layui-input-block">
+							<i class="layui-icon" id="test1">&#xe67c;</i>
+						</div>
+					</div>
+					<div class="layui-form-item">
+						<label class="layui-form-label">上传商品介绍图</label>
+						<div class="layui-input-block">
+							<i class="layui-icon" id="test2">&#xe67c;</i>
+						</div>
+					</div>
+					
+
+					<div class="layui-form-item">
+						<label class="layui-form-label">商品价格</label>
+						<div class="layui-input-block">
+							<input type="text" name="productPrice" required  lay-verify="required|number" placeholder="请输入价格" autocomplete="off" class="layui-input">
+						</div>
+					</div>
+					<div class="layui-form-item">
+						<label class="layui-form-label">商品数量</label>
+						<div class="layui-input-block">
+							<input type="text" name="productNumber" required  lay-verify="required|number" placeholder="请输入数量" autocomplete="off" class="layui-input">
+						</div>
+					</div>
+					<div class="layui-form-item">
+						<div class="layui-input-block">
+							<button class="layui-btn" lay-submit lay-filter="formDemo">立即提交</button>
+							<button type="reset" class="layui-btn layui-btn-primary">重置</button>
+						</div>
+					</div>
+				</form>
+			</div>
+			<div class="layui-tab-item">
+				<form class="layui-form" action="">
+					<div class="layui-form-item">
+						<label class="layui-form-label">选择要删除的商品id</label>
+						<div class="layui-input-block">
+							<select name="selectedId" lay-verify="required">
+								<option value=""></option>
+								<option value="0">1</option>
+								<option value="1">2</option>
+								<option value="2">3</option>
+								<option value="3">4</option>
+								<option value="4">5</option>
+							</select>
+						</div>
+					</div>
+				
+					<div class="layui-form-item">
+						<div class="layui-input-block">
+							<button class="layui-btn" lay-submit lay-filter="formDemo">立即提交</button>
+							<button type="reset" class="layui-btn layui-btn-primary">重置</button>
+						</div>
+					</div>
+				</form>
+			</div>
+		</div>
+	</div>
+
+
+	<script type="text/javascript">
+
+		layui.config({
+    base: 'res/static/js/util/' //你存放新模块的目录，注意，不是layui的模块目录
+}).use(['mm','carousel','element','form','upload'],function(){
+	var carousel = layui.carousel,
+	mm = layui.mm;
+	var option = {
+		elem: '#test1'
+        ,width: '100%' //设置容器宽度
+        ,arrow: 'always'
+        ,height:'298' 
+        ,indicator:'none'
+    }
+    carousel.render(option);   
+    var form = layui.form;
+      //监听提交
+      form.on('submit(formDemo)', function(data){
+      	layer.msg(JSON.stringify(data.field));
+      	return false;
+      });
+
+      var upload = layui.upload;
+    //执行实例
+    var uploadInst = upload.render({
+    elem: '#test1' //绑定元素
+    ,url: '/upload/' //上传接口
+    ,done: function(res){
+      //上传完毕回调
+  }
+  ,error: function(){
+      //请求异常回调
+  }});  
+    //执行实例
+    var uploadInst = upload.render({
+    elem:'#test2'//绑定元素
+    ,url: '/upload/' //上传接口
+    ,done: function(res){
+      //上传完毕回调
+  }
+  ,error: function(){
+      //请求异常回调
+  }});  
+});
+</script>
+</body>
+</html>
